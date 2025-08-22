@@ -19,14 +19,14 @@
 
 ## Quick Installation
 ```
-curl -sSL https://raw.githubusercontent.com/vishnu-prasadtv/pcddumpctl/main/pcddumpctl-start.sh | bash
+curl -sSL https://raw.githubusercontent.com/platform9/PCDDump/pcddumpctl/main/pcddumpctl-start.sh | bash
 ```
 
 ## Manual Installation
 ### 1. Clone the GitHub Repository
 
 ```bash
-git clone https://github.com/vishnu-prasadtv/pcddumpctl.git
+git clone https://github.com/platform9/PCDDump/pcddumpctl.git
 cd pcddumpctl
 ```
 
