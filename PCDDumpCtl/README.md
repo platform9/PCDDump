@@ -19,7 +19,7 @@
 
 ## Quick Installation
 ```
-curl -sSL https://raw.githubusercontent.com/platform9/PCDDump/pcddumpctl/main/pcddumpctl-start.sh | bash
+curl -sSL https://raw.githubusercontent.com/platform9/PCDDump/main/PCDDumpCtl/pcddumpctl-start.sh | bash
 ```
 
 ## Manual Installation
@@ -27,7 +27,12 @@ curl -sSL https://raw.githubusercontent.com/platform9/PCDDump/pcddumpctl/main/pc
 
 ```bash
 git clone https://github.com/platform9/PCDDump/pcddumpctl.git
-cd pcddumpctl
+cd pcddump/PCDDumpCtl
+
+PCDDumpCtl % ls -l
+-rw-r--r--  1 user  staff   1427 22 Aug 11:53 pcddumpctl-start.sh
+-rw-r--r--  1 user  staff  31874 22 Aug 11:53 pcddumpctl.py
+-rw-r--r--  1 user  staff   8198 22 Aug 11:53 README.md
 ```
 
 ### 2. Set Up Python Virtual Environment (Recommended)
