@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd ~/
-
 set -e
 
 # Detect the user's shell and set config file accordingly
@@ -15,6 +13,8 @@ else
     SHELL_RC="$HOME/.profile"
     SHELL_TYPE="profile"
 fi
+
+cd ~/
 
 # Clone repo if not present
 if [ ! -d "pcddumpctl" ]; then
