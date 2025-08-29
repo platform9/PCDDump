@@ -1,7 +1,7 @@
 
 # 🚀 pcddumpctl
 
-`pcddumpctl` is a lightweight Python CLI tool that simulates `kubectl`-like interactions with offline Platform9 Kubernetes cluster dump files collected usgin.
+`pcddumpctl` is a lightweight Python CLI tool that simulates `kubectl`-like experience with offline Platform9 Kubernetes cluster dump files collected using `pcddump` utility https://github.com/platform9/PCDDump/tree/main.
 
 ---
 
