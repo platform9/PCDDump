@@ -83,9 +83,9 @@ export CLUSTER_DUMP_PATH=/path/to/your/pcd-dump
 ```
 
 Or 
-Manually set the value using 
+Manually set the value for the file .basepath inside pcd-dumpctl folder:
 ```bash
-vi /basepath
+vi .basepath
 ## Add the absolute path to the `/path/to/your/pcd-dump`
 ```
 
