@@ -82,6 +82,13 @@ source ~/.bashrc
 export CLUSTER_DUMP_PATH=/path/to/your/pcd-dump
 ```
 
+Or 
+Manually set the value using 
+```bash
+vi /basepath
+## Add the absolute path to the `/path/to/your/pcd-dump`
+```
+
 Note: Ensure the path `/path/to/your/pcd-dump` has the related namespace folders present.
 Example:
 ```
