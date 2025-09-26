@@ -15,7 +15,7 @@ else
 fi
 
 # Clone repo if not present
-if [ ! -d "pcddumpctl" ]; then
+if [ ! -d "PCDDump" ]; then
         git clone https://github.com/platform9/PCDDump.git
 fi
 cd .PCDDump/PCDDumpCtl
