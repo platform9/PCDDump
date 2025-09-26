@@ -14,8 +14,6 @@ else
     SHELL_TYPE="profile"
 fi
 
-cd ~/
-
 # Clone repo if not present
 if [ ! -d "pcddumpctl" ]; then
         git clone https://github.com/platform9/PCDDump.git
