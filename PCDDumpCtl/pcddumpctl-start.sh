@@ -18,7 +18,7 @@ fi
 if [ ! -d "PCDDump" ]; then
         git clone https://github.com/platform9/PCDDump.git
 fi
-cd .PCDDump/PCDDumpCtl
+cd PCDDump/PCDDumpCtl
 
 # Create virtual environment if not present
 if [ ! -d "pf9env" ]; then
@@ -26,17 +26,17 @@ if [ ! -d "pf9env" ]; then
 fi
 
 # Activate the virtual environment
-source .PCDDump/PCDDumpCtl/pf9env/bin/activate
+source pf9env/bin/activate
 
 # Install required modules
 pip install --upgrade pip
 pip install -r requirements.txt
 
 # Make the script executable
-chmod +x .PCDDump/PCDDumpCtl/pcddumpctl.py
+chmod +x pcddumpctl.py
 
 # Copy binary to /usr/local/bin
-sudo cp .PCDDump/PCDDumpCtl/pcddumpctl.py /usr/local/bin/pcddumpctl
+sudo cp pcddumpctl.py /usr/local/bin/pcddumpctl
 
 echo 'Now you are ready to use "pcddumpctl" or "pc" commands!'
 
