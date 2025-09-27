@@ -138,7 +138,7 @@ def get_basepath():
             if path and os.path.isdir(path):
                 return os.path.abspath(path)
     # 4. Prompt user
-    path = input("Enter absolute path to the PCD-dump directory - Example: /home/user/tmp/pcdump : ").strip()
+    path = input("Enter absolute path to the 'pcddump' directory - Example: /home/<user>/tmp/pcddump-<date>/pcddump : ").strip()
     if not path or not os.path.isdir(path):
         print("Error: Valid basepath must be specified.", file=sys.stderr)
         sys.exit(1)
