@@ -165,8 +165,8 @@ for ns in $NAMESPACES; do
         echo "    └─ Found problematic pods, collecting logs..."
         for pod in $FAILED_PODS; do
             echo "      └─ Collecting logs for pod: ${pod}"
-            kubectl logs -n "${ns}" "$pod" --previous > "${NS_DIR}/pod-logs/${pod}-previous.log" 2>/dev/null || echo "No previous logs available" > "${NS_DIR}/pod-logs/${pod}-previous.log"
-            kubectl logs -n "${ns}" "$pod" > "${NS_DIR}/pod-logs/${pod}-current.log" 2>/dev/null || echo "No current logs available" > "${NS_DIR}/pod-logs/${pod}-current.log"
+            kubectl logs -n "${ns}" "$pod" --previous --all-containers > "${NS_DIR}/pod-logs/${pod}-previous.log" 2>/dev/null || echo "No previous logs available" > "${NS_DIR}/pod-logs/${pod}-previous.log"
+            kubectl logs -n "${ns}" "$pod" --all-containers > "${NS_DIR}/pod-logs/${pod}-current.log" 2>/dev/null || echo "No current logs available" > "${NS_DIR}/pod-logs/${pod}-current.log"
         done
     else
         echo "    └─ No problematic pods found"
@@ -178,7 +178,7 @@ for ns in $NAMESPACES; do
         POD_LOG_DIR="${NS_DIR}/${pod}"
         mkdir -p "${POD_LOG_DIR}"
         echo "      └─ Saving logs for pod: ${pod} to ${POD_LOG_DIR}/logs.txt"
-        kubectl logs -n "${ns}" "${pod}" > "${POD_LOG_DIR}/logs.txt" 2>/dev/null || echo "No logs available" > "${POD_LOG_DIR}/logs.txt"
+        kubectl logs -n "${ns}" "${pod}" --all-containers > "${POD_LOG_DIR}/logs.txt" 2>/dev/null || echo "No logs available" > "${POD_LOG_DIR}/logs.txt"
     done
 
     echo "  ✅ Completed processing namespace: ${ns}"
